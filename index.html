@@ -10,12 +10,188 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <!-- menu section -->
+    <section class="menu-section">
+      <nav class="navbar navbar-expand-lg sticky-top py-4">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <a class="navbar-brand title-color" href="#">MULTI</a>
+          <div
+            class="d-none d-lg-flex justify-content-end align-items-center flex-grow-1"
+          >
+            <ul class="navbar-nav text-color me-3">
+              <li class="nav-item">
+                <a class="nav-link" style="color: #ed502e !important" href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+              <li class="nav-item dropdown">
+                <button
+                  class="btn btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                >
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#"
+                      >Deep Dropdown</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">Deep Dropdown 1</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Deep Dropdown 2</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Deep Dropdown 3</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Deep Dropdown 4</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Deep Dropdown 5</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                  <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                  <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="btn btn-warning px-4">Get Started</a>
+          </div>
+          <div class="d-flex d-lg-none align-items-center gap-2">
+            <a href="#" class="btn btn-warning">Get Started</a>
+            <button
+              class="btn"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+            >
+              <i class="bi bi-list" style="font-size: 2rem"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Offcanvas Menu -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav text-color">
+            <li class="nav-item">
+              <a class="nav-link" style="color: #ed502e !important" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownMenuButton"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"
+                    >Deep Drop-Down</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Deep Drop-Down 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Deep Drop-Down 2</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Deep Drop-Down 3</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Deep Drop-Down 4</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Deep Drop-Down 5</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Deep Dropdown -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var dropdownSubmenus = document.querySelectorAll(
+            ".dropdown-submenu > a"
+          );
+
+          dropdownSubmenus.forEach(function (element) {
+            element.addEventListener("click", function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+              let submenu = this.nextElementSibling;
+              if (submenu) {
+                submenu.classList.toggle("show");
+              }
+            });
+          });
+
+          document.addEventListener("click", function (e) {
+            document
+              .querySelectorAll(".dropdown-submenu .dropdown-menu")
+              .forEach(function (submenu) {
+                submenu.classList.remove("show");
+              });
+          });
+        });
+      </script>
+    </section>
+  </body>
 </html>
