@@ -1,15 +1,43 @@
+.btn-warning {
+  background-color: #ed502e !important;
+  color: #ffffff !important;
+  border: 0 !important;
+}
+
+.text-color {
+  color: #444444 !important;
+}
+
+.title-color {
+  color: #0b2341 !important;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-50px); /* Start 50px above */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* End at normal position */
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px); /* Start 50px lower */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* End at normal position */
+    opacity: 1;
+  }
+}
+
 /* menu section */
 .menu-section {
-  .text-color {
-    color: #444444 !important;
-  }
-
-  .title-color {
-    color: #0b2341 !important;
-    font-size: 26px;
-    font-weight: 700;
-  }
-
   .navbar {
     background-color: white;
   }
@@ -23,10 +51,6 @@
   }
   .nav-link:hover {
     color: #ed502e !important;
-  }
-  .btn-warning {
-    background-color: #ed502e !important;
-    color: #ffffff !important;
   }
 
   .dropdown button:hover {
@@ -44,5 +68,43 @@
   .dropdown-submenu .dropdown-menu {
     top: 0;
     left: -105%;
+  }
+}
+
+.carousel-section {
+  .slider1 {
+    height: 60vh;
+    width: 100%;
+    background-image: url("../assets/hero-carousel-1.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3);
+  }
+
+  .slider2 {
+    height: 60vh;
+    width: 100%;
+    background-image: url("../assets/hero-carousel-2.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3);
+  }
+
+  .slider3 {
+    height: 60vh;
+    width: 100%;
+    background-image: url("../assets/hero-carousel-3.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3);
+  }
+
+  .carousel-caption h2,
+  p {
+    animation: slideDown 1s ease-out forwards;
+  }
+
+  .carousel-caption a {
+    animation: slideUp 1s ease-out forwards;
   }
 }
