@@ -79,6 +79,19 @@
   }
 }
 
+.stat-card {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.stat-icon {
+  font-size: 30px;
+  color: #ed502e;
+}
+
 .btn-warning {
   background-color: #ed502e !important;
   color: #ffffff !important;
